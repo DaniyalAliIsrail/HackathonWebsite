@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;}
+.profile-card{
+    /* border: 1px solid red; */
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-left: 50px ;
+
+}
+input:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: rgb(119, 73, 248);
+ }
+ .custombtn{
+    box-shadow: none !important;
+    border: none !important;
+ }
+ login-btn{
+    box-shadow: none;
+ }
+ login-btn:focus{
+    border-color: blueviolet;
+ }
+

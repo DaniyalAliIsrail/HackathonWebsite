@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="modal fade " id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="uptTitle" class="col-form-label">Title:</label>
+              <input type="text" class="form-control customInput" id="uptTitle">
+            </div>
+            <div class="mb-3">
+              <label for="uptDescription" class="col-form-label">Blog Text:</label>
+              <textarea class="form-control customInput" style="resize: none;" id="uptDescription"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="uptClose" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="updateBtn" style="background-color: rgb(119, 73, 248);">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+              are you shure you eant to delete
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary"  id="delClose" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="delBtn" style="background-color: rgb(119, 73, 248);">del</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background-color: rgb(119, 73, 248);" class="">
+    <div class="topNavWraper d-flex justify-content-between mx-auto align-items-center py-1 container">
+      <p class="mb-0 text-white fw-bold">Personal Blogging App</p>
+      <div class="d-flex justify-content-between">
+        <a href="./profile.html" class="nav-link fw-bold text-white" id="name">Daniyal Ali</a>
+        <a href="#" class="nav-link fw-bold text-white">signup</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="px-5 navbar navbar-expand-sm shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" >
+        <h4 class="text-dark fw-bold">Dashboard</h4>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+    </div>
+  </nav>
+
+  <!-- ////post section -->
+  <div class="main-post-container">
+    <div style="width: 50%; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; " class="m-4 p-5">
+      <div class="mb-3">
+
+        <input style="width: 100%;  box-shadow: none;" type="text" class="form-control p-2"
+          id="title" placeholder="placeholder">
+      </div>
+      <div class="mb-3">
+        <textarea style="width: 100%; box-shadow: none;" class="form-control" id="textfilled"
+          placeholder="what is your mind" rows="5"></textarea>
+      </div>
+      <button style="width: 28%; background-color:rgb(119, 73, 248); border: none; box-shadow: none; color: white;"
+        class="btn shadow-none" id="post">Publish Blog</button>
+    </div>
+  </div>
+
+  <div class="myblog fw-bold p-3 w-3">
+    <h2>My Blogs</h2>
+  </div>
+  <!-- card section -->
+ <section id="postBox">
+  <!-- <div style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; width: 50%;" class="p-3 ms-3 mb-3">
+    <div style=" width: 100%;"  >
+      <div class="authorsDetails d-flex align-items-center">
+        <div class="post-header-container d-flex align-items-center">
+          <div style="width:100px; height: 100px;" class="rounded">
+            <img 
+              src="https://images.unsplash.com/photo-1682687220777-2c60708d6889?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="" class="img-fluid" style="width: 100%;height: 100%; object-fit: cover ;">
+          </div>
+          <div class="userName-id ms-3 w-100 border-1">
+            <h6 style="font-size: 16px;" class=" userTag">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h5>
+              <p style="font-size: 12px;">Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+      <div class="main-paragraph" >
+        <p class="mb-3 ms-2 m-3 " style="font-size: 16px; width:100%; word-wrap: break-word ;">Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Molestias magnam id cumque eius porro sint perferendis temporibus. Quia magnam sint
+          repellat alias quidem repellendus, id dicta. Quibusdam, repudiandae placeat! Mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, odio?</p>
+        <div style="width: 50%;" class="postDetails">
+          <button style="width: 100px;" class="btn  btn-primary ">Delete</button>
+          <button style="width: 100px;" class="btn  btn-primary ">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+ </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+  integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="dashboard.js" type="module"></script>
+</html>
